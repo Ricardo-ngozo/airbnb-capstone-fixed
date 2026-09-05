@@ -41,7 +41,7 @@ app.use("/api/accommodations", accommodationRoutes);
 app.use("/api/reservations", reservationRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/tapline", require("./routes/taplineRoutes"));
-app.use("/api/dev", require("./routes/devSeedRoutes")); // TEMP: remove after seeding demo accounts once
+app.use("/api/dev", require("./routes/devseedroutes")); // TEMP: remove after seeding demo accounts once
 
 app.use((req, res) => {
   res.status(404).json({ message: `Route not found: ${req.originalUrl}` });
