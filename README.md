@@ -12,6 +12,8 @@ airbnb-capstone/
     models/
     routes/
     seed/
+    tests/
+    app.js
     server.js
   frontend/
     src/
@@ -21,6 +23,9 @@ airbnb-capstone/
       data/
       pages/
       styles/
+      tests/
+  docs/
+    Testing_and_Validation_Report.docx
 ```
 
 ## Frontend Preview
@@ -71,6 +76,23 @@ Default seed logins:
 jane@example.com / password321
 john@example.com / password123
 ```
+
+Demo logins for the 3 user roles (run `npm run seed:accounts` to create these):
+
+```text
+guest@demo.com / Guest123!   (role: user)
+host@demo.com  / Host123!    (role: host)
+admin@demo.com / Admin123!   (role: admin)
+```
+
+## Testing & Validation
+
+Automated tests cover authentication (guest/host/admin), JWT protection, booking validation, and the login UI's role-based redirects.
+
+- Backend: `cd backend && npm test` (Jest + Supertest, 16 tests)
+- Frontend: `cd frontend && npm test` (Vitest + React Testing Library, 6 tests)
+
+Full write-up, test tables, and manual QA notes: [Testing & Validation Report](docs/Testing_and_Validation_Report.docx)
 
 ## API Routes
 
