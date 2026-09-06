@@ -8,7 +8,12 @@
     "dev:safe": "node server.js",
     "start": "node server.js",
     "seed": "node seed/seed.js",
-    "seed:accounts": "node seed/seedAccounts.js"
+    "seed:accounts": "node seed/seedAccounts.js",
+    "test": "jest --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": ["./tests/setup.js"]
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,6 +27,8 @@
     "multer": "^2.2.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.4"
+    "nodemon": "^3.1.4",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
   }
 }
